@@ -10,7 +10,8 @@ var polygon;
 var slingShot;
 var polygon_img;
 var score =0;
-
+var bg = "js/bg.png";
+var backgroundImg;
 function preload(){
   polygon_img=loadImage("polygon.png");
   getBackgroundImg();
@@ -68,8 +69,8 @@ function setup() {
 
 }
 function draw() {
-  background(56,44,44); 
-
+  if (backgroundImg){
+    background(backgroundImg);
   //Engine.update(engine);
 
   textSize(20);
@@ -154,6 +155,7 @@ function draw() {
   blocks6.score();
   blocks7.score();
   blocks8.score();
+  }
 }
 function mouseDragged(){
   Matter.Body.setPosition(this.polygon,{x:mouseX,y:mouseY});
