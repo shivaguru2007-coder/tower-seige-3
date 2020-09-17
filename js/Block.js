@@ -39,5 +39,6 @@ class Block{
       if(this.visibility<0 && this.visibility>-160){
       score=score+1;
       } 
+      
     }
 }
