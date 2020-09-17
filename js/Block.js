@@ -7,16 +7,17 @@ class Block{
             //isStatic:true
            
         }
-        this.visibility = 225;
+        this.visibility = 1;
         this.body = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
         this.height = height;
         World.add(world, this.body);
         
       }
-     
+
+      
       display(){
-        console.log(this.body.speed);
+       // console.log(this.body.speed);
         if(this.body.speed <3){
         var angle = this.body.angle;
         var pos= this.body.position;
@@ -33,5 +34,10 @@ class Block{
         pop();
         
       }
+    }
+    score(){
+      if(this.visibility<0 && this.visibility>-160){
+      score=score+1;
+      } 
     }
 }
