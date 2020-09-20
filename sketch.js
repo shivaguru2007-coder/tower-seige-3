@@ -18,7 +18,7 @@ function preload(){
   getBackgroundImg();
 }
 function setup() {
-  createCanvas(900,400);
+  createCanvas(displayWidth,displayheight);
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
